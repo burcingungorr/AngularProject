@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.user-box {
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  max-width: 97%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  margin: 16px;
+  margin-top: 30px;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-header h3 {
+  margin: 0;
+  color: #444;
+  font-size: 22px;
+}
+
+.add-task-btn {
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+  background-color: #0056b3;
+}
+
+.task-input-row {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-input-row input[type="text"],
+.task-input-row input[type="date"],
+.task-input-row select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1 1 150px;
+  box-sizing: border-box;
+}
+
+.task-input-row button {
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.task-input-row button:hover {
+  background-color: #1e7e34;
+}
+
+.task-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.task-item {
+  background-color: #f4f4f4;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item strong {
+  font-size: 23px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.task-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-and-date {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.status-and-date select {
+  padding: 4px 8px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.due-date {
+  font-style: italic;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  border: none;
+  padding: 8px 14px;
+  font-weight: bold;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+}

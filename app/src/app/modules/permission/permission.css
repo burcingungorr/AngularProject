@@ -1,0 +1,120 @@
+/* Kullanıcı kutusu */
+body {
+  font-family: Arial, sans-serif;
+}
+h2,
+h3 {
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin-bottom: 12px;
+  padding: 16px;
+}
+
+/* Form alanları */
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 97%;
+  margin-bottom: 30px;
+  margin: 16px;
+  font-family: Arial, sans-serif;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  margin: 10px 0;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 50px;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Form butonu */
+form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 18px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Başvurular listesi */
+ul {
+  list-style: none;
+  padding-left: 0;
+  background-color: white;
+  margin: 16px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  padding: 12px;
+}
+
+li {
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+/* Başvuru durum rengi */
+span {
+  font-weight: bold;
+}
+
+/* Onayla / Reddet butonları */
+li button {
+  margin-top: 10px;
+  margin-right: 8px;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li button:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+li button:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+li button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+li button:last-of-type:hover {
+  background-color: #b02a37;
+}

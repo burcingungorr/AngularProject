@@ -1,0 +1,52 @@
+<app-employee-list
+  [employees]="employees"
+  (onDelete)="userRole === 'admin' ? deleteEmployee($event) : null"
+  (onEdit)="userRole === 'admin' ? editEmployee($event) : null"
+  (onSave)="userRole === 'admin' ? saveEmployee($event) : null"
+  (onCancel)="cancelEdit($event)"
+></app-employee-list>
+
+<button *ngIf="userRole === 'admin'" (click)="showForm = !showForm">
+  {{ showForm ? 'İptal' : 'Yeni Çalışan Ekle' }}
+</button>
+
+<div *ngIf="showForm && userRole === 'admin'">
+  <h3>Yeni Çalışan Ekle</h3>
+  <form (submit)="addEmployee($event)">
+    <input
+      type="text"
+      placeholder="Adı"
+      [(ngModel)]="newFirstName"
+      name="firstName"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Soyadı"
+      [(ngModel)]="newLastName"
+      name="lastName"
+      required
+    />
+    <input
+      type="email"
+      placeholder="E-posta"
+      [(ngModel)]="newContact"
+      name="contact"
+    />
+    <input
+      type="text"
+      placeholder="Pozisyon"
+      [(ngModel)]="newPosition"
+      name="position"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Departman"
+      [(ngModel)]="newDepartment"
+      name="department"
+    />
+    <input type="date" [(ngModel)]="newHireDate" name="hireDate" />
+    <button type="submit">Ekle</button>
+  </form>
+</div>

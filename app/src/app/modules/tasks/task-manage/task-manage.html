@@ -1,0 +1,60 @@
+<body>
+  <div *ngFor="let user of users" class="user-box">
+    <div class="user-header">
+      <h3>{{ user.name }}</h3>
+      <button (click)="toggleInput(user.id)" class="add-task-btn">
+        {{ user.showInput ? 'İptal' : 'Görev Ekle' }}
+      </button>
+    </div>
+
+    <div *ngIf="user.showInput" class="task-input-row">
+      <input
+        [(ngModel)]="newTaskTitles[user.id]"
+        placeholder="Görev başlığı"
+        type="text"
+      />
+
+      <select [(ngModel)]="newTaskStatuses[user.id]">
+        <option value="Yeni">Yeni</option>
+        <option value="Devam Ediyor">Devam Ediyor</option>
+        <option value="Tamamlandı">Tamamlandı</option>
+      </select>
+
+      <input
+        [(ngModel)]="newTaskDueDates[user.id]"
+        type="date"
+        placeholder="Son teslim"
+      />
+
+      <button (click)="addTask(user.id)">Kaydet</button>
+    </div>
+
+    <ul class="task-list">
+      <li *ngFor="let task of user.tasks" class="task-item">
+        <strong>{{ task.title }}</strong>
+
+        <div class="task-details">
+          <div class="status-and-date">
+            Durum:
+            <select
+              [(ngModel)]="task.status"
+              (change)="updateTaskStatus(user.id, task.id, task.status)"
+            >
+              <option value="Yeni">Yeni</option>
+              <option value="Devam Ediyor">Devam Ediyor</option>
+              <option value="Tamamlandı">Tamamlandı</option>
+            </select>
+
+            <span class="due-date"
+              >Son Teslim: {{ task.dueDate || 'Belirtilmemiş' }}</span
+            >
+          </div>
+
+          <button class="delete-btn" (click)="removeTask(user.id, task.id)">
+            Sil
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>

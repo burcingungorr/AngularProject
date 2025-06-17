@@ -1,0 +1,30 @@
+<ul>
+  <li *ngFor="let employee of employees">
+    <div *ngIf="employee.editMode">
+      <input [(ngModel)]="employee.firstName" placeholder="Adı" />
+      <input [(ngModel)]="employee.lastName" placeholder="Soyadı" />
+      <input [(ngModel)]="employee.contact" placeholder="E-posta" />
+      <input [(ngModel)]="employee.position" placeholder="Pozisyon" />
+      <input [(ngModel)]="employee.department" placeholder="Departman" />
+      <input
+        [(ngModel)]="employee.hireDate"
+        type="date"
+        placeholder="İşe Giriş Tarihi"
+      />
+      <button (click)="onSave.emit(employee)">Kaydet</button>
+      <button (click)="onCancel.emit(employee)">İptal</button>
+    </div>
+
+    <div *ngIf="!employee.editMode">
+      <button (click)="onEdit.emit(employee)">Güncelle</button>
+      <button (click)="onDelete.emit(employee.id)">Sil</button>
+      <p>
+        <strong>{{ employee.firstName }} {{ employee.lastName }}</strong><br />
+      </p>
+      {{ employee.contact }}<br />
+      <p>Pozisyon: {{ employee.position }}<br /></p>
+      <p>Departman: {{ employee.department }}<br /></p>
+      <p>İşe Giriş: {{ employee.hireDate }}<br /></p>
+    </div>
+  </li>
+</ul>

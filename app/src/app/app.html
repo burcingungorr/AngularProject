@@ -1,0 +1,50 @@
+<nav *ngIf="isLoggedIn()">
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Anasayfa</a
+  >
+  | <a routerLink="/employees" routerLinkActive="active">Çalışanlar</a> |
+  <a routerLink="/tasks" routerLinkActive="active">Görevler</a> |
+  <a routerLink="/permission" routerLinkActive="active">İzinler</a>
+  |
+
+  <span *ngIf="auth.isLoggedIn">
+    <button
+      (click)="logout()"
+      style="
+        background-color: #dc3545;
+        color: white;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      "
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        viewBox="0 0 24 24"
+      >
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+        <polyline points="16 17 21 12 16 7" />
+        <line x1="21" y1="12" x2="9" y2="12" />
+      </svg>
+    </button>
+  </span>
+
+  <span *ngIf="!auth.isLoggedIn">
+    <a routerLink="/login">Giriş Yap</a>
+  </span>
+</nav>
+
+<router-outlet></router-outlet>

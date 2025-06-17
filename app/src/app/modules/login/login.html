@@ -1,0 +1,19 @@
+<h2>Giriş Yap</h2>
+<form (submit)="login(); $event.preventDefault()">
+  <input
+    type="text"
+    placeholder="Kullanıcı Adı"
+    [(ngModel)]="username"
+    name="username"
+    required
+  />
+  <input
+    type="password"
+    placeholder="Şifre"
+    [(ngModel)]="password"
+    name="password"
+    required
+  />
+  <button type="submit">Giriş</button>
+</form>
+<p>{{ message }}</p>

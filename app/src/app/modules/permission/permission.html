@@ -1,0 +1,39 @@
+<body>
+  <h2>İzin Başvuru Formu</h2>
+  <form (submit)="addRequest(); $event.preventDefault()">
+    <input
+      type="text"
+      [(ngModel)]="employeeName"
+      name="employeeName"
+      placeholder="Çalışan Adı"
+      required
+    />
+    <select [(ngModel)]="selectedType" name="type">
+      <option *ngFor="let type of permissionTypes" [value]="type">
+        {{ type }} İzni
+      </option>
+    </select>
+    <input type="date" [(ngModel)]="startDate" name="startDate" required />
+    <input type="date" [(ngModel)]="endDate" name="endDate" required />
+    <button type="submit">Başvur</button>
+  </form>
+
+  <h3>İzin Başvuruları</h3>
+  <ul>
+    <li *ngFor="let request of requests">
+      <b>{{ request.employeeName }}</b> - {{ request.type }} ({{
+      request.startDate }} → {{ request.endDate }})<br />
+      Toplam: {{ request.totalDays }} gün —
+      <span
+        [ngStyle]="{ color: request.status === 'Beklemede' ? 'orange' : request.status === 'Onaylandı' ? 'green' : 'red' }"
+      >
+        {{ request.status }}
+      </span>
+
+      <div *ngIf="request.status === 'Beklemede' && userRole === 'admin'">
+        <button (click)="approveRequest(request.id)">Onayla</button>
+        <button (click)="rejectRequest(request.id)">Reddet</button>
+      </div>
+    </li>
+  </ul>
+</body>
