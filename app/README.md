@@ -1,59 +1,44 @@
-# App
+# Çalışan Yönetim Web Sitesi 🏢
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+Bu proje, şirketlerin çalışanlarını kolayca yönetebileceği kapsamlı bir web uygulamasıdır.  
+Admin paneli üzerinden çalışan ekleme, silme, izin taleplerini yönetme ve görev atama işlemleri yapılabilmektedir.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Özellikler
 
-```bash
-ng serve
-```
+- 👥 Çalışan ekleme, silme ve listeleme  
+- 🔒 Yönetici (Admin) paneli ile yetkilendirme  
+- 📝 Çalışanların izin talebi oluşturması  
+- ✅ İzin taleplerinin onaylanması veya reddedilmesi  
+- 📋 Çalışanlara görev atama ve takibi  
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Kullanılan Teknolojiler 🛠️
 
-## Code scaffolding
+- **Angular** – Modern, bileşen tabanlı frontend framework  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## Amaç 💡
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Şirket içi insan kaynakları ve iş takibi süreçlerini dijitalleştirerek, iş yükünü azaltmak ve yönetimi kolaylaştırmak.  
+Çalışanlar ve yöneticiler arasındaki iletişimi ve görev koordinasyonunu hızlandırmak.
 
-```bash
-ng generate --help
-```
 
-## Building
 
-To build the project run:
+<div align="center">
+  <img src="![Ekran görüntüsü 2025-06-03 170817](https://github.com/user-attachments/assets/155509cb-0f86-4e3f-a119-ea78821359c0)
+" width="400" style="margin-right:10px;" />
+  <img src="![Ekran görüntüsü 2025-06-03 170823](https://github.com/user-attachments/assets/884151c2-56b7-44ad-bb81-a3d9ca488cfa)
+" width="400" />
+</div>
 
-```bash
-ng build
-```
+<div align="center" style="margin-top:10px;">
+  <img src="![Ekran görüntüsü 2025-06-03 170837](https://github.com/user-attachments/assets/28cb72b3-b692-41d2-bc26-82c59dd5f282)
+" width="400" style="margin-right:10px;" />
+  <img src="![Ekran görüntüsü 2025-06-03 170841](https://github.com/user-attachments/assets/57fb9d00-6c97-43aa-9865-8d31666d6c4e)
+" width="400" />
+</div>
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
